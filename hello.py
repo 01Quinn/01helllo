@@ -1,6 +1,11 @@
 import math
 
 
+
+
+name = input("enter your name: ")
+print("Hello, {}!".format(name))
+
 num1 = float(input("Enter a number: "))
 num2 = float(input("Enter another number: "))
 sum = num1 + num2
@@ -14,9 +19,7 @@ print("you are: ", name, "and your school is: ", school)
 print(f" your name is {name}, and your school is {school}")
 print(f" your name is {name}, and your school is {school}, and your float is {floatvarible: .2f}")
 
-rds = float(input("Enter rds: "))
-area = math.pi * (rds ** 2)
-print(area)
+
 
 invariable = 4
 floatvariable = 4.5
