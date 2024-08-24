@@ -1,6 +1,12 @@
 import math
-print("Hello, Quinn")
 #1
+print("Hello, Quinn")
+
+#1
+name = input("Enter your name: ")
+print(f"hello, {name}")
+
+#2
 rds = float(input("Enter rds: "))
 area = math.pi * (rds ** 2)
 print(f"The area is: {area: .2f}")
