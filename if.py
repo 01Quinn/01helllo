@@ -1,47 +1,60 @@
-# ''''''
-# sum = 0
-# counter = 1
-# while counter < 10:
-#     sum = sum + counter
-#     print(f"the counter is: {counter} and sum of counter with the sum {sum}")
-#     counter = counter + 1
+#1
+length = float(input("Enter the length of the zander: "))
+if length < 42:
+    print("Please release the fish back into the lake!")
+    size_limit = length - 42
+    print(f"There are {size_limit} below the size limit!")
+else:
+    print("You got a zander!")
 
-# i = 1
-# n = int(input("enter a limit: "))
-# while i <= n:
-#     if i % 2 == 0:
-#         print(f"{i} is an even number")
-#
-#     else:
-#         print(f"{i} is an odd number")
-#
-#     i = i + 1
+#2
+cabin_class = input("Enter the cabin class: ")
+if cabin_class == 'LUX':
+    print("Upper-deck cabin with a balcony.")
+elif cabin_class == 'A':
+    print("Above the car deck, equipped with a window.")
+elif cabin_class == 'B':
+    print("windowless cabin above the car deck.")
+elif cabin_class == 'C':
+    print("Windowless cabin below the car deck.")
+else:
+    print("Invalid cabin class.")
 
-# import random
-# num1 = random.randint(1, 9)
-# num = 0
-# while True:
-#     num2 = int(input("Enter a number: "))
-#     num = num + 1
-#     if num1 == num2:
-#         print("Number entered is equal to number")
-#         break
-#     else:
-#         print("Try again")
-#
-# print(f"you have guessed {num} times")
-
-# user_input = " "
-# while user_input != "exit":
-#     user_input = input("try something (or exit to quit): ")
-#     print(user_input)
-
-import random
-result = random.choice(["heads", "tails"])
-while True:
-    if result == "heads":
-        print("flipped:", result)
-        break
+#3
+gender = input("Enter the gender (m or f): ")
+value = float(input("Enter the hemoglobin value (g/l): "))
+if gender == 'm':
+    if 134 < value < 167:
+        print("the hemoglobin value is normal.")
+    elif value < 134:
+        print("The hemoglobin value is low.")
     else:
-        print("try again")
+        print("The hemoglobin value is high.")
+if gender == 'f':
+    if 117 < value < 155:
+        print("the hemoglobin value is normal.")
+    elif value < 117:
+        print("The hemoglobin value is low.")
+    else:
+        print("The hemoglobin value is high.")
+
+#4
+year = int(input("Enter a year: "))
+if year % 4 == 0 and year % 100 != 0:
+    print(f"The year {year} is a leap year!")
+elif year % 400 == 0:
+    print(f"The year {year} is a leap year!")
+else:
+    print(f"The year {year} is not a leap year!")
+
+
+
+
+
+
+
+
+
+
+
 
