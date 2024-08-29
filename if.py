@@ -21,17 +21,17 @@ else:
     print("Invalid cabin class.")
 
 #3
-gender = input("Enter the gender (m or f): ")
-value = float(input("Enter the hemoglobin value (g/l): "))
+gender = str(input("Enter the gender (m or f): "))
+value = int(input("Enter the hemoglobin value (g/l): "))
 if gender == 'm':
-    if 134 < value < 167:
+    if 134 <= value <= 167:
         print("the hemoglobin value is normal.")
     elif value < 134:
         print("The hemoglobin value is low.")
     else:
         print("The hemoglobin value is high.")
-if gender == 'f':
-    if 117 < value < 155:
+elif gender == 'f':
+    if 117 <= value <= 155:
         print("the hemoglobin value is normal.")
     elif value < 117:
         print("The hemoglobin value is low.")
@@ -40,9 +40,9 @@ if gender == 'f':
 
 #4
 year = int(input("Enter a year: "))
-if year % 4 == 0 and year % 100 != 0:
+if year % 400 == 0 and year % 100 == 0:
     print(f"The year {year} is a leap year!")
-elif year % 400 == 0:
+elif year % 4 == 0:
     print(f"The year {year} is a leap year!")
 else:
     print(f"The year {year} is not a leap year!")

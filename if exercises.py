@@ -45,7 +45,7 @@ elif age > 7:
 elif age < 6:
     print("Your are a child.")
 
-# ''''''
+
 # sum = 0
 # counter = 1
 # while counter < 10:
