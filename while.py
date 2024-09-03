@@ -6,15 +6,15 @@ while i <= 1000:
     i += 1
 
 #2
-num = input(float("Enter a number of inches: "))
-num1 = float(num * 2.54)
 while True:
+    num = float(input("Enter a number of inches: "))
     if num >= 0:
-        print(f"{num} inches equals to {num1}.")
+        num1 = float(num * 2.54)
+        print(f"{num} inches equals to {num1} centimeters.")
     num = float(input("Enter a number of inches: "))
     else:
         print("Execution stopped.")
-    break
+        break
 
 #3
 max_num = 0
