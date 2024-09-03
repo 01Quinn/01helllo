@@ -67,5 +67,7 @@ while count < num:
     a = random.randint(-1, 1)
     b = random.randint(-1, 1)
     if a ** 2 + b ** 2 < 1:
-    count += 1
-    circle += 1
+        circle += 1
+count += 1
+c = 4 * circle / num
+print(c)
