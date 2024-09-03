@@ -34,3 +34,28 @@ while num1 > 0:
 #4
 import random
 num = random.randint(1, 10)
+num1 = int(input("Enter a number: "))
+while True:
+    if num > num1:
+        print("Too high")
+    elif num < num1:
+        print("Too low")
+    elif num == num1:
+        print("Correct")
+        break
+
+#5
+round_original = 0
+while round_original < 5:
+    name = input("Enter the username: ")
+    password = input("Enter the password: ")
+    if name == "python" and password == "rules":
+        print(f"Welcome {name}")
+        break
+    else:
+        print("Incorrect username and password, please try again!")
+        round_original += 1
+    if round_original == 5:
+        print("Access denied!")
+
+#6
