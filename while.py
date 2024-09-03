@@ -6,12 +6,12 @@ while i <= 1000:
     i += 1
 
 #2
+num = float(input("Enter a number of inches: "))
 while True:
-    num = float(input("Enter a number of inches: "))
     if num >= 0:
         num1 = float(num * 2.54)
         print(f"{num} inches equals to {num1} centimeters.")
-    num = float(input("Enter a number of inches: "))
+        num = float(input("Enter a number of inches: "))
     else:
         print("Execution stopped.")
         break
@@ -59,3 +59,9 @@ while round_original < 5:
         print("Access denied!")
 
 #6
+import random
+count = 0
+num = int(input("Enter a number: "))
+while count < num:
+    a = random.randint(-1, 1)
+    count += 1
