@@ -60,8 +60,12 @@ while round_original < 5:
 
 #6
 import random
+circle = 0
 count = 0
 num = int(input("Enter a number: "))
 while count < num:
     a = random.randint(-1, 1)
+    b = random.randint(-1, 1)
+    if a ** 2 + b ** 2 < 1:
     count += 1
+    circle += 1
