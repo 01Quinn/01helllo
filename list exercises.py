@@ -31,9 +31,13 @@
 #     print(i)
 
 num = int(input("Enter a number: "))
-for i in range(1,num+1):
-    if num % 2 == 0:
-        print(f" the number {i} is even!")
-    else:
-        print(f" the number {i} is odd!")
+while num > 0:
+    for i in range(1,num+1):
+        if num % 2 == 0:
+            print(f"the number {num} is even!")
+            num = int(input("Enter a number: "))
+        else:
+            print(f"the number {num} is odd!")
+        num = int(input("Enter a number: "))
+        break
 
