@@ -43,16 +43,53 @@
 # multiply(2, 3)
 
 #4
-score = []
-def square(number):
-    return number * number
- while True:
-    n = int(input('Enter a number: '))
-    if n == 0:
-        break
-    else:
-        score.append(n)
-print(f"{n} square :", square(n))
-print("here is the list:")
-print(score)
+# score = []
+# def square(number):
+#     return number * number
+#  while True:
+#     n = int(input('Enter a number: '))
+#     if n == 0:
+#         break
+#     else:
+#         score.append(n)
+# print(f"{n} square :", square(n))
+# print("here is the list:")
+# print(score)
+#
+#5
+def sum(a,b):
+    a = int(input("enter a number: "))
+    b = int(input("enter another number: "))
+    sum = a+b
+    return sum
+print(sum(1,2))
 
+
+n = []
+def read():
+    while True:
+        a = int(input("enter a number: "))
+        if a == "":
+            break
+        else:
+           num = a
+        a.append(n)
+        print(a)
+
+list(n)
+print("here is the list:")
+
+
+def cal_sum(numbers):
+    total = 0
+    for n in numbers:
+        total += n
+    return total
+
+
+def find_largest(numbers):
+    largest = max(numbers)
+    for n in numbers:
+        if n > max(numbers):
+            largest = max(numbers)
+    return largest
