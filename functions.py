@@ -1,15 +1,12 @@
-#3
-max_num = None
-min_num = None
-num1 = float(input("Enter a number: "))
-while True:
-    if max_num is None or num1 > max_num:
-        max_num = num1
-    if min_num is None or num1 < min_num:
-        min_num = num1
-    if num1 == " ":
+round = 0
+while round < 5:
+    name = input("Enter the username: ")
+    password = input("Enter the password: ")
+    if name == "python" and password == "rules":
+        print(f"Welcome {name}")
         break
-    num1 = float(input("Enter a number: "))
-    print(f"the max_num is {max_num}, the min_num is {min_num}.")
-
-
+    else:
+        print("Incorrect username and password, please try again!")
+        round += 1
+    if round == 5:
+        print("Access denied!")

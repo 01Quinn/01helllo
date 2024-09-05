@@ -19,19 +19,19 @@ while True:
 #3
 max_num = None
 min_num = None
-num1 = float(input("Enter a number: "))
-while True:
+num1 = (input("Enter a number: "))
+while num1 != "":
+    num1 = float(num1)
     if max_num is None or num1 > max_num:
         max_num = num1
     if min_num is None or num1 < min_num:
         min_num = num1
-    num1 = float(input("Enter a number: "))
-    if num1 == " ":
-        break
+
+    num1 = (input("Enter a number: "))
+print(f"Max: {max_num} and Min: {min_num}")
 
 #4
 import random
-counter = 0
 num = random.randint(1, 10)
 while True:
     num1 = int(input("Enter a number: "))
@@ -44,8 +44,8 @@ while True:
         break
 
 #5
-round_original = 0
-while round_original < 5:
+round = 0
+while round < 5:
     name = input("Enter the username: ")
     password = input("Enter the password: ")
     if name == "python" and password == "rules":
@@ -53,8 +53,8 @@ while round_original < 5:
         break
     else:
         print("Incorrect username and password, please try again!")
-        round_original += 1
-    if round_original == 5:
+        round += 1
+    if round == 5:
         print("Access denied!")
 
 #6
