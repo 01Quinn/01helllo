@@ -17,18 +17,16 @@ while True:
         break
 
 #3
-max_num = 0
-min_num = 0
-num1 = float(input("Enter a number: "))
-while num1 > 0:
-    if num1 > max_num:
-        max_num = num1
-        print(num1)
+max_num = None
+min_num = None
+while True:
     num1 = float(input("Enter a number: "))
-    if num1 < min_num:
+    if max_num is None or num1 > max_num:
+        max_num = num1
+    if min_num is None or num1 < min_num:
         min_num = num1
-        print(num1)
-    if num == " ":
+    num1 = float(input("Enter a number: "))
+    if num1 == " ":
         break
 
 #4
@@ -40,7 +38,7 @@ while True:
         print("Too high")
     elif num < num1:
         print("Too low")
-    elif num == num1:
+    else:
         print("Correct")
         break
 
