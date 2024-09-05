@@ -61,12 +61,13 @@ while round < 5:
 import random
 circle = 0
 count = 0
-num = int(input("Enter a number: "))
+num = int(input("Enter how many points to generate: "))
 while count < num:
-    a = random.randint(-1, 1)
-    b = random.randint(-1, 1)
+    a = random.uniform(-1, 1)
+    b = random.uniform(-1, 1)
     if a ** 2 + b ** 2 < 1:
         circle += 1
-count += 1
+    count += 1
 c = 4 * circle / num
 print(c)
+
