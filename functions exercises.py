@@ -12,3 +12,25 @@ def multiply():
 print(multiply())
 cal = multiply() + 10
 print(cal)
+
+#3
+def sum(a, b):
+    sum = a + b
+    return sum
+sum(1, 2)
+
+def subtract(a, b):
+    return a - b
+subtract(2, 3)
+
+
+def divide(a, b):
+    return a / b
+divide(2, 3)
+
+
+def multiply(a, b):
+    return a * b
+multiply(2, 3)
+
+
