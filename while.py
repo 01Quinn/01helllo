@@ -19,8 +19,8 @@ while True:
 #3
 max_num = None
 min_num = None
+num1 = float(input("Enter a number: "))
 while True:
-    num1 = float(input("Enter a number: "))
     if max_num is None or num1 > max_num:
         max_num = num1
     if min_num is None or num1 < min_num:
@@ -31,9 +31,10 @@ while True:
 
 #4
 import random
+counter = 0
 num = random.randint(1, 10)
-num1 = int(input("Enter a number: "))
 while True:
+    num1 = int(input("Enter a number: "))
     if num > num1:
         print("Too high")
     elif num < num1:
