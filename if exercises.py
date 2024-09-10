@@ -104,3 +104,7 @@ elif age < 6:
 
 # for i in range(5):
 #     print(i)
+
+name = "python"
+name_type = type(name)
+print(name_type)
