@@ -30,14 +30,30 @@
 # for i in range(1,9,2):
 #     print(i)
 
-num = int(input("Enter a number: "))
-while num > 0:
-    for i in range(1,num+1):
-        if num % 2 == 0:
-            print(f"the number {num} is even!")
-            num = int(input("Enter a number: "))
-        else:
-            print(f"the number {num} is odd!")
-        num = int(input("Enter a number: "))
-        break
+# num = int(input("Enter a number: "))
+# while num > 0:
+#     for i in range(1,num+1):
+#         if num % 2 == 0:
+#             print(f"the number {num} is even!")
+#             num = int(input("Enter a number: "))
+#         else:
+#             print(f"the number {num} is odd!")
+#         num = int(input("Enter a number: "))
+#         break
 
+while True:
+    num = int(input("Enter a number: "))
+    prime_numbers = True
+    if num <= 1:
+        print("The number is not a prime number")
+        prime_numbers = False
+
+    else:
+        for i in range(2, int(num ** 0.5) + 1):
+            if num % i == 0:
+                prime_num = False
+                break
+    if prime_numbers:
+        print(f"The number {num} is a prime number")
+    else:
+        print(f"The number {num} is not a prime number")
