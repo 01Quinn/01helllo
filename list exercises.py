@@ -41,19 +41,22 @@
 #         num = int(input("Enter a number: "))
 #         break
 
-while True:
-    num = int(input("Enter a number: "))
-    prime_numbers = True
-    if num <= 1:
-        print("The number is not a prime number")
-        prime_numbers = False
+def converted_to_liters(gallons):
+    liters = gallons * 3.785
+    return liters
 
-    else:
-        for i in range(2, int(num ** 0.5) + 1):
-            if num % i == 0:
-                prime_num = False
-                break
-    if prime_numbers:
-        print(f"The number {num} is a prime number")
-    else:
-        print(f"The number {num} is not a prime number")
+
+def main():
+
+    while True:
+        gallons = float(input("Enter the volume of gasoline in gallons: "))
+        if gallons < 0:
+            print("Please enter a positive number!")
+            break
+
+        liters = converted_to_liters(gallons)
+        print(f"The volume of gasoline in liters: {liters}")
+
+
+main()
+

@@ -4,6 +4,8 @@
 # The main program should print out the result of each roll.
 import random
 
+from list import total_sum
+
 
 def dice():
     roll = random.randint(1, 6)
@@ -63,7 +65,42 @@ main()
 
 
 # 4
+# Write a function that gets a list of integers as a parameter.
+# The function returns the sum of all the numbers in the list.
+# For testing, write a main program where you create a list, call the function, and print out the value it returned.
 
+def num(mylist):
+    total = 0
+    for number in (mylist):
+        total += number
+    return total
+
+mylist = [1, 3, 4, 5]
+result = list(num(mylist))
+print(result)
 
 # 5
+# Write a function that gets a list of integers as a parameter.
+# The function returns a second list that is otherwise the same as the original list
+# except that all uneven numbers have been removed.
+# For testing, write a main program where you create a list, call the function,
+# and then print out both the original as well as the cut-down list.
 
+def evenlist(numbers):
+    evenlist = []
+    for number in numbers:
+        if number % 2 == 0:
+            evenlist.append(number)
+        return evenlist
+
+mylist = [2,4,5,6,7,8,9,12]
+result = evenlist(mylist)
+print(f"Even list: {result}")
+
+# 6
+# Write a function that receives two parameters:
+# the diameter of a round pizza in centimeters and the price of the pizza in euros.
+# The function calculates and returns the unit price of the pizza per square meter.
+# The main program asks the user to enter the diameter and price of two pizzas
+# and tells the user which pizza provides better value for money (which of them has a lower unit price).
+# You must use the function you wrote for calculating the unit prices.
