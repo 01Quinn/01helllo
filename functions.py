@@ -104,3 +104,19 @@ print(f"Even list: {result}")
 # The main program asks the user to enter the diameter and price of two pizzas
 # and tells the user which pizza provides better value for money (which of them has a lower unit price).
 # You must use the function you wrote for calculating the unit prices.
+import math
+def pizza(diameter,price):
+    radius = (diameter / 2) / 100
+    area_pizza = math.pi * radius ** 2
+    price_meter = price / area_pizza
+    return price_meter
+pizza1_diameter = float(input("Enter the diameter of the first pizza: "))
+pizza1_price = float(input("Enter the price of the pizza: "))
+pizza2_diameter = float(input("Enter the diameter of the second pizza: "))
+pizza2_price = float(input("Enter the price of the pizza: "))
+if pizza(pizza1_diameter, pizza1_price) < pizza(pizza2_diameter, pizza2_price):
+    print("The first pizza is a good deal!")
+elif pizza(pizza1_diameter, pizza1_price) > pizza(pizza2_diameter, pizza2_price):
+    print("The second pizza is a good deal!")
+else:
+    print("Both pizzas offer the same value!")
