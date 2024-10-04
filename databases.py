@@ -2,11 +2,10 @@ import mysql.connector
 connection = mysql.connector.connect(
     host = '127.0.0.1',
     port = 3306,
-    database = 'airports',
+    database = 'flight_game',
     user = 'root',
-    password = 'wq453489931.',
-    autocommit = True
-)
+    password = '453489',
+    autocommit = True)
 print("connection")
 
 
