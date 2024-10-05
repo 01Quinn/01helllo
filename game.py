@@ -93,7 +93,7 @@ def main():
             bird = pygame.Rect(bird_x, -BIRD_HEIGHT, BIRD_WIDTH, BIRD_HEIGHT)
             birds.append(bird)
 
-            bird_add_increment = max(1000, bird_add_increment - 50)
+            bird_add_increment = max(10, bird_add_increment - 1)
             bird_count = 0
 
         # Event handling
