@@ -2,6 +2,7 @@ import pygame
 import random
 import time
 import mysql.connector
+from numpy import character
 
 pygame.font.init()
 
@@ -12,11 +13,11 @@ pygame.display.set_caption("Flying Game")
 
 # Load images
 bg = pygame.transform.scale(pygame.image.load("background.jpeg"), (WIDTH, HEIGHT))
-logo_image = pygame.image.load("logo.png")
-bell_image = pygame.image.load("bell.png")
-gift_image = pygame.image.load("gift.png")
-bird_image = pygame.image.load("bird.png")
-blood_image = pygame.image.load("blood.png")
+character_image = pygame.image.load("character.jpeg")
+bell_image = pygame.image.load("bell.jpeg")
+gift_image = pygame.image.load("gifts.jpeg")
+bird_image = pygame.image.load("bird.jpeg")
+blood_image = pygame.image.load("hat.jpeg")
 
 # Player and object dimensions
 PLAYER_WIDTH = 40
