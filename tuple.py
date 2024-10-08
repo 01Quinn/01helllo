@@ -62,6 +62,7 @@ while True:
     new_airport = input("Do you want to enter a new airport(enter 1),"
                         "fetch the information of an existing airport(enter 2), "
                         "or quit( enter q):")
+
     if new_airport == "q":
         print("Execution ends.")
         break
