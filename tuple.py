@@ -1,3 +1,4 @@
+#1
 def season(month):
     seasons = ("winter", "spring", "summer", "autumn")
 
@@ -37,3 +38,6 @@ while True:
 
 print("Input stopped")
 
+# 2
+
+# 3
