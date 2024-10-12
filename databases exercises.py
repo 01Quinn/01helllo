@@ -15,11 +15,10 @@ connection = mysql.connector.connect(
 print("connection")
 
 def get_airport(icao_code):
-    sql = f"SELECT name, lmunicipality FROM airport WHERE ident ='{icao_code}'"
-    print(sql)
+    sql = f"SELECT name, municipality FROM airport WHERE ident = %s"
     cursor = connection.cursor()
-    cursor.execute(sql)
-    result = cursor.fetchall()
+    cursor.execute(sql,(icao_code,))
+    result = cursor.fetchone()
     return result
 
 
@@ -31,6 +30,14 @@ def main():
             print("Exiting the program...")
             break
 
+        airport_info = get_airport(icao_code)
+
+        if airport_info:
+            name, municipality = airport_info
+            print(f"Airport name: [{name}]")
+            print(f"Airport location: {municipality}")
+        else:
+            print(f"Airport not found")
 
 
 main()
