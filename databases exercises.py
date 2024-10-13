@@ -9,16 +9,16 @@ connection = mysql.connector.connect(
     user = 'root',
     password = '453489',
     autocommit = True)
-print("connection")
+print("Connection established.")
 
 
 def get_airport(area_code):
-    sql = (f"SELECT type, count(*) as count "
-           f"FROM airport WHERE iso_country = '{area_code}"
-           f"group by type, count(*) order by count desc")
+    sql = (f"SELECT name, type "
+           f"FROM airport WHERE iso_country = %s "
+           f" order by type")
 
     cursor = connection.cursor()
-    cursor.execute(sql, area_code)
+    cursor.execute(sql, (area_code,))
     result = cursor.fetchall()
     return result
 
@@ -29,14 +29,18 @@ def main():
         if area_code == 'q':
             print("Bye")
             break
+
         airport_info = get_airport(area_code)
 
         if airport_info:
+
             print(f"Airport in {area_code}:")
-            for type, count in airport_info:
-                print(f"\t{type}: {count}")
+            for airport_type, name in airport_info:
+                print(f"\t{airport_type}: {name}")
         else:
             print("No airports found.")
+
+
 main()
 
 
