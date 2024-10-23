@@ -66,3 +66,4 @@ class Faculty:
         print(self.courses)
         for course in self.courses:
             print(course)
+
