@@ -66,7 +66,6 @@ class GasolineCar(Car):
         self.volume = volume
 
 
-# Creating instances of ElectricCar and GasolineCar
 ecar = ElectricCar(license_plate='ABC-15', maximum_speed=180, capacity=52.5)
 gcar = GasolineCar(license_plate="ACD-123", maximum_speed=165, volume=32.3)
 
