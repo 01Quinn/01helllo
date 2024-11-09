@@ -33,20 +33,31 @@ target_floor = int(input("Enter the floor: "))
 h.go_to_floor(target_floor)
 
 # 2
+class Elevator:
+    def __init__(self, num_bottom, num_top):
+        self.current_floor = num_bottom
+        self.num_bottom = num_bottom
+        self.num_top = num_top
+
+    def go_to_floor(self, floor):
+        if floor < self.num_bottom or floor > self.num_top:
+            print(f"Floor {floor} is out of range!")
+            return
+        self.current_floor = floor
+        print(f"Elevator has arrived at floor {floor}.")
 
 class Building:
     def __init__(self, num_bottom, num_top, num_elevators):
         self.num_bottom = num_bottom
         self.num_top = num_top
-        self.num_elevators = num_elevators
-        self.num_elevators = []
+        self.elevators = []
 
         for e in range(num_elevators):
             elevator = Elevator(num_bottom, num_top)
-            self.num_elevators.append(elevator)
+            self.elevators.append(elevator)
 
     def run_elevator(self, number_elevator, destination):
-        if number_elevator < 0 or number_elevator >= self.num_elevators:
+        if number_elevator < 0 or number_elevator >= len(self.elevators):
             print("Error!")
             return
 
@@ -73,7 +84,7 @@ class Building:
             self.elevators.append(elevator)
 
     def run_elevator(self, number_elevator, destination):
-        if number_elevator < 0 or number_elevator >= self.num_elevators:
+        if number_elevator < 0 or number_elevator > int(self.num_elevators):
             print("Error!")
             return
 
@@ -97,9 +108,10 @@ import random
 
 
 class Car:
-    def __init__(self, registration_number1, maximum_speed1):
+    def __init__(self, registration_number1, maximum_speed1, license):
         self.registration_number = registration_number1
         self.maximum_speed = maximum_speed1
+        self.license = license
         self.current_speed = 0
         self.travelled_distance = 0
 
@@ -130,7 +142,6 @@ class Race:
             a.drive(1)
 
     def print_status(self):
-        print(self.name + ":")
         print("Current status of each car is: ")
         print("Registration number | Maximum speed | Current speed | Travelled distance")
 
@@ -148,7 +159,7 @@ car_objects = []
 for c in range(1, 11):
     maximum_speed = random.randint(100, 200)
     registration_number = f"ABC-{c}"
-    car = Car(registration_number, maximum_speed)
+    car = Car(registration_number, maximum_speed, car_objects)
     car_objects.append(car)
 
 race = Race("Grand Demolition Derby", 8000, car_objects)
@@ -158,7 +169,6 @@ while not race.race_finished():
     race.hour_passes()
     if hour % 10 == 0:
         race.print_status()
-        print(f"after {hour} hours")
     hour += 1
 
 print("Final results:")
