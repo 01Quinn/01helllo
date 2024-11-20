@@ -9,3 +9,6 @@ for weather in result['weather']:
 
 print("Temperature")
 print(result["main"]["temp"])
+
+
+
