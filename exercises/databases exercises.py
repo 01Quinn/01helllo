@@ -7,7 +7,7 @@ connection = mysql.connector.connect(
     port = 3306,
     database = 'airports',
     user = 'root',
-    password = '453489',
+    password = '00000',
     autocommit = True)
 print("Connection established.")
 
